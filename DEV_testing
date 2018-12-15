@@ -1,0 +1,29 @@
+<joblist>
+  <job>
+    <context>
+      <options preserveOrder='true'>
+        <option name='message' />
+      </options>
+    </context>
+    <defaultTab>summary</defaultTab>
+    <description>Testing purpose for rundeck</description>
+    <executionEnabled>true</executionEnabled>
+    <group>Variables</group>
+    <id>context</id>
+    <loglevel>INFO</loglevel>
+    <name>DEV testing</name>
+    <nodeFilterEditable>false</nodeFilterEditable>
+    <scheduleEnabled>true</scheduleEnabled>
+    <sequence keepgoing='false' strategy='node-first'>
+      <command>
+        <script><![CDATA[echo @job.id@
+echo @job.name@
+echo @job.project@
+echo @job.username@
+]]></script>
+        <scriptargs />
+      </command>
+    </sequence>
+    <uuid>context</uuid>
+  </job>
+</joblist>
